@@ -1,0 +1,59 @@
+/* ===== Services Page ===== */
+.services-page {
+  padding-bottom: 0;
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--primary) 0%, #0f2341 100%);
+  padding: 100px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.services-content {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 80px 0 40px;
+  }
+
+  .page-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .services-content {
+    padding: 40px 0;
+  }
+}
