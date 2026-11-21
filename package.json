@@ -1,0 +1,14 @@
+{
+  "name": "adimire-website",
+  "version": "1.0.0",
+  "description": "Adimire Ent - IT Services & Digital Solutions Website",
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

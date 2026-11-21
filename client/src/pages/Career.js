@@ -55,8 +55,8 @@ const Career = () => {
                 <h3>No Openings Right Now</h3>
                 <p>
                   We don't have any open positions at the moment, but we're
-                  always looking for talented people. Send your resume to{' '}
-                  <strong>careers@adimire.com</strong>
+                  always looking for talented engineers and creators. Send your resume to{' '}
+                  <strong style={{ color: 'var(--cyan)' }}>hrd@adimire.com</strong>
                 </p>
               </div>
             ) : (

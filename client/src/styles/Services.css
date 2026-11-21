@@ -1,59 +1,81 @@
-/* ===== Services Page ===== */
-.services-page {
-  padding-bottom: 0;
+/* ===== 3D Services Page Styles ===== */
+.services-page-3d {
+  position: relative;
+  z-index: 1;
 }
 
-.page-header {
-  background: linear-gradient(135deg, var(--primary) 0%, #0f2341 100%);
+.services-header-3d {
   padding: 100px 0 60px;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, rgba(0, 245, 255, 0.08) 0%, transparent 60%);
 }
 
-.page-header::before {
-  content: '';
-  position: absolute;
-  top: -40%;
-  right: -15%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.page-header h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-.page-header p {
-  font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 600px;
+.services-header-content {
+  max-width: 780px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
-.services-content {
+.services-tag-pill {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(0, 245, 255, 0.08);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+}
+
+.services-header-3d h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+}
+
+.services-header-3d p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.services-content-section {
+  padding-bottom: 120px;
+}
+
+.services-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 80px 0;
+  gap: 20px;
+  color: var(--cyan);
+}
+
+.loading-spinner-3d {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 245, 255, 0.15);
+  border-top-color: var(--cyan);
+  border-right-color: var(--violet);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 @media (max-width: 768px) {
-  .page-header {
-    padding: 80px 0 40px;
-  }
-
-  .page-header h1 {
-    font-size: 2.25rem;
-  }
-
-  .services-content {
-    padding: 40px 0;
+  .services-header-3d h1 {
+    font-size: 2.5rem;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HiLocationMarker, HiPhone, HiMail, HiMap } from 'react-icons/hi';
+import { HiLocationMarker, HiPhone, HiMail, HiUser, HiMap } from 'react-icons/hi';
 import ContactForm from '../components/ContactForm';
 import '../styles/ContactUs.css';
 
@@ -31,21 +31,11 @@ const ContactUs = () => {
 
                 <div className="contact-info-item">
                   <div className="contact-info-icon">
-                    <HiLocationMarker />
+                    <HiUser />
                   </div>
                   <div className="contact-info-text">
-                    <h4>Our Office</h4>
-                    <p>Pune, Maharashtra, India</p>
-                  </div>
-                </div>
-
-                <div className="contact-info-item">
-                  <div className="contact-info-icon">
-                    <HiPhone />
-                  </div>
-                  <div className="contact-info-text">
-                    <h4>Phone Number</h4>
-                    <p>+91 98765 43210</p>
+                    <h4>Contact Person</h4>
+                    <p>Adimire Head</p>
                   </div>
                 </div>
 
@@ -55,7 +45,35 @@ const ContactUs = () => {
                   </div>
                   <div className="contact-info-text">
                     <h4>Email Address</h4>
-                    <p>info@adimire.com</p>
+                    <p>
+                      <a href="mailto:hrd@adimire.com" style={{ color: 'var(--cyan)' }}>
+                        hrd@adimire.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="contact-info-item">
+                  <div className="contact-info-icon">
+                    <HiPhone />
+                  </div>
+                  <div className="contact-info-text">
+                    <h4>Direct Phone / WhatsApp</h4>
+                    <p>
+                      <a href="tel:+919011050894" style={{ color: 'inherit' }}>
+                        +91 90110 50894
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="contact-info-item">
+                  <div className="contact-info-icon">
+                    <HiLocationMarker />
+                  </div>
+                  <div className="contact-info-text">
+                    <h4>Our Headquarters</h4>
+                    <p>Pune, Maharashtra, India</p>
                   </div>
                 </div>
               </div>
@@ -64,8 +82,8 @@ const ContactUs = () => {
               <div className="map-card">
                 <div className="map-placeholder">
                   <HiMap className="map-icon" />
-                  <p>Google Maps Embed</p>
-                  <p style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
+                  <p>Global Engineering Center</p>
+                  <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '4px' }}>
                     Pune, Maharashtra, India
                   </p>
                 </div>

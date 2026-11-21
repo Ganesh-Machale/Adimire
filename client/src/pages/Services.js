@@ -25,13 +25,13 @@ const fallbackServices = [
     _id: '1',
     title: 'Web & E-commerce',
     description:
-      'We build high-performance corporate websites, CMS-powered platforms, feature-rich online stores, customer portals, and conversion-optimized landing pages.',
+      'We engineer ultra-responsive corporate websites, headless CMS platforms, high-velocity e-commerce stores, and enterprise client portals built for scale and conversions.',
     features: [
-      'Corporate & portfolio websites',
-      'CMS websites (WordPress, custom)',
-      'E-commerce & online stores',
-      'Web portals & dashboards',
-      'Landing pages & microsites',
+      'High-performance Next.js & React architectures',
+      'Headless CMS & custom content systems',
+      'Secure multi-vendor e-commerce stores',
+      'Client portals & self-service dashboards',
+      'Ultra-fast conversion landing pages',
     ],
     icon: <HiGlobeAlt />,
   },
@@ -39,13 +39,13 @@ const fallbackServices = [
     _id: '2',
     title: 'Applications',
     description:
-      'From scalable web applications to cross-platform mobile apps, we develop robust solutions with modern frameworks and seamless API integrations.',
+      'End-to-end full stack web applications and cross-platform mobile apps engineered with modern reactive frameworks, offline capabilities, and resilient API gateways.',
     features: [
-      'Custom web applications',
-      'Mobile apps (iOS & Android)',
-      'Admin dashboards & panels',
-      'REST & GraphQL APIs',
-      'Third-party system integrations',
+      'Custom React / Node.js web applications',
+      'Cross-platform iOS & Android mobile apps',
+      'Real-time analytics & telemetry dashboards',
+      'Scalable REST & GraphQL microservice APIs',
+      'Payment gateways & third-party integrations',
     ],
     icon: <HiDeviceMobile />,
   },
@@ -53,13 +53,13 @@ const fallbackServices = [
     _id: '3',
     title: 'Digital Growth',
     description:
-      'Accelerate your online presence with data-driven SEO strategies, targeted digital marketing campaigns, and comprehensive analytics solutions.',
+      'Precision SEO engineering, programmatic advertising campaigns, hyper-targeted digital funnels, and algorithmic analytics that systematically compound revenue.',
     features: [
-      'Search Engine Optimization (SEO)',
-      'Digital marketing strategy',
-      'Paid advertising campaigns',
-      'Lead generation funnels',
-      'Analytics & performance tracking',
+      'Technical SEO audit & search visibility',
+      'Omnichannel performance marketing funnels',
+      'High-ROI paid search & social campaigns',
+      'Automated lead generation pipelines',
+      'Predictive conversion rate optimization (CRO)',
     ],
     icon: <HiTrendingUp />,
   },
@@ -67,13 +67,13 @@ const fallbackServices = [
     _id: '4',
     title: 'Creative & Brand',
     description:
-      'Elevate your brand with stunning UI/UX design, professional brochures, impactful brand assets, and creative campaign materials.',
+      'World-class visual design systems, 3D interactive user interfaces, cohesive brand identity packages, and engaging multi-format marketing collateral.',
     features: [
-      'UI/UX design & prototyping',
-      'Brand identity & guidelines',
-      'Brochures & print materials',
-      'Campaign creatives & ads',
-      'Content strategy & creation',
+      'Interactive 3D UI/UX design & prototyping',
+      'Comprehensive brand identity systems & guidelines',
+      'Investor pitch decks & executive brochures',
+      'High-impact campaign creatives & 3D motion',
+      'Strategic brand narrative & copy systems',
     ],
     icon: <HiColorSwatch />,
   },
@@ -81,13 +81,13 @@ const fallbackServices = [
     _id: '5',
     title: 'Cloud & Support',
     description:
-      'Reliable cloud hosting setup, SSL security, ongoing maintenance, regular backups, and round-the-clock technical support for your peace of mind.',
+      'Zero-downtime cloud infrastructure deployment, hardened SSL security, automated disaster recovery backups, and continuous 24/7 technical monitoring.',
     features: [
-      'Cloud hosting & deployment',
-      'SSL certificates & security',
-      'Website maintenance & updates',
-      'Automated backups',
-      '24/7 technical support',
+      'Cloud setup (AWS, GCP, DigitalOcean, Azure)',
+      'Automated CI/CD deployment pipelines',
+      'SSL certificates, DDoS mitigation & firewalls',
+      'Continuous daily backups & failover recovery',
+      '24/7 proactive monitoring & SLAs',
     ],
     icon: <HiCloud />,
   },
@@ -95,13 +95,13 @@ const fallbackServices = [
     _id: '6',
     title: 'Custom Software',
     description:
-      'Tailored software solutions for business workflow automation, CRM/ERP systems, and industry-specific applications that streamline your operations.',
+      'Bespoke enterprise software tailored to automate mission-critical business workflows, custom CRM/ERP platforms, and proprietary operating environments.',
     features: [
-      'Business process automation',
-      'CRM & ERP solutions',
-      'Industry-specific software',
-      'Data management systems',
-      'Legacy system modernization',
+      'Automated workflow & process engines',
+      'Custom CRM, ERP & inventory platforms',
+      'Industry-specific automation suites',
+      'Legacy software re-architecture & migration',
+      'Scalable database design & optimization',
     ],
     icon: <HiCode />,
   },
@@ -123,7 +123,7 @@ const Services = () => {
           setServices(mapped);
         }
       } catch (err) {
-        // Use fallback services
+        // Fallback
       } finally {
         setLoading(false);
       }
@@ -132,25 +132,31 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="services-page">
-      {/* Page Header */}
-      <div className="page-header">
+    <div className="services-page-3d">
+      {/* 3D Page Hero Header */}
+      <section className="services-header-3d">
         <div className="container">
-          <h1>Our Services</h1>
-          <p>
-            End-to-end digital and software solutions designed to help your
-            business innovate, scale, and succeed.
-          </p>
+          <div className="services-header-content">
+            <span className="services-tag-pill">ENGINEERING EXCELLENCE</span>
+            <h1>
+              Full-Spectrum <span className="gradient-3d-text">IT Services</span>
+            </h1>
+            <p>
+              Explore our comprehensive suite of digital, software, and cloud capabilities. 
+              Each module is crafted with enterprise-grade standards, built to evolve with your business.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Services Grid */}
-      <div className="services-content">
+      {/* Services Grid (Requirement: shown in both home & services) */}
+      <section className="services-content-section section-padding">
         <div className="container">
           {loading ? (
-            <p style={{ textAlign: 'center', color: '#64748b' }}>
-              Loading services...
-            </p>
+            <div className="services-loading">
+              <div className="loading-spinner-3d" />
+              <p>Initializing Service Modules...</p>
+            </div>
           ) : (
             <div className="services-grid">
               {services.map((service) => (
@@ -163,7 +169,7 @@ const Services = () => {
             </div>
           )}
         </div>
-      </div>
+      </section>
     </div>
   );
 };

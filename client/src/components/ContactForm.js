@@ -62,7 +62,7 @@ const ContactForm = () => {
               type="text"
               id="name"
               name="name"
-              placeholder="John Doe"
+              placeholder="e.g. Adimire Client"
               value={formData.name}
               onChange={handleChange}
               required
@@ -74,7 +74,7 @@ const ContactForm = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="john@example.com"
+              placeholder="e.g. client@example.com"
               value={formData.email}
               onChange={handleChange}
               required
@@ -89,7 +89,7 @@ const ContactForm = () => {
               type="tel"
               id="phone"
               name="phone"
-              placeholder="+91 98765 43210"
+              placeholder="+91 90110 50894"
               value={formData.phone}
               onChange={handleChange}
             />
@@ -100,7 +100,7 @@ const ContactForm = () => {
               type="text"
               id="subject"
               name="subject"
-              placeholder="How can we help?"
+              placeholder="Project Inquiry / Consultation"
               value={formData.subject}
               onChange={handleChange}
               required
@@ -113,7 +113,7 @@ const ContactForm = () => {
           <textarea
             id="message"
             name="message"
-            placeholder="Tell us about your project or inquiry..."
+            placeholder="Tell us about your project requirements, timeline, or business goals..."
             value={formData.message}
             onChange={handleChange}
             required
