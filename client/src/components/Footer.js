@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaLinkedinIn, FaGithub, FaTwitter } from 'react-icons/fa';
-import { HiLocationMarker, HiPhone, HiMail, HiLightningBolt, HiUser } from 'react-icons/hi';
+import { HiLocationMarker, HiPhone, HiMail, HiUser } from 'react-icons/hi';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -12,10 +12,12 @@ const Footer = () => {
           {/* Brand */}
           <div className="footer-brand-3d">
             <div className="footer-logo-row">
-              <div className="footer-logo-cube">
-                <HiLightningBolt />
-              </div>
-              <span className="footer-logo-text">ADIMIRE</span>
+              <img
+                src="/logo-transparent.png"
+                alt="Adimire Ent Logo"
+                className="footer-logo-img"
+              />
+              <span className="footer-logo-text">ADIMIRE ENT</span>
             </div>
             <p className="footer-brand-desc">
               Next-generation IT solutions and software engineering. We architect resilient digital foundations, custom business operating systems, and high-conversion web platforms for global innovators.

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HiMenuAlt3, HiX, HiLightningBolt } from 'react-icons/hi';
+import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -31,12 +31,14 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-glass-container">
           <Link to="/" className="navbar-logo" onClick={closeMenu}>
-            <div className="navbar-logo-cube">
-              <HiLightningBolt className="logo-bolt" />
-            </div>
+            <img
+              src="/logo-transparent.png"
+              alt="Adimire Ent Logo"
+              className="navbar-logo-img"
+            />
             <div className="navbar-brand-text">
-              <span className="brand-title">ADIMIRE</span>
-              <span className="brand-tag">TECHNOLOGIES</span>
+              <span className="brand-title">ADIMIRE ENT</span>
+              <span className="brand-tag">DIGITAL & SOFTWARE SOLUTIONS</span>
             </div>
           </Link>
 
